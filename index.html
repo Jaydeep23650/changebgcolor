@@ -4,25 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Background Color</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Space between the heading and the select box */
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
-  <h1>Changing the Background Color</h1>
-  <select name="colors" id="colors" style="align-items: center;">
-    <option value="">Select Color</option>
-    <option value="lightcoral">Light Coral</option>
-    <option value="lavender">Lavender</option>
-    <option value="hotpink">Hottest Pink</option>
-    <option value="gamboge">Gamboge</option>
-    <option value="green">Green</option>
-    <option value="red">Red</option>
-    <option value="black">Black</option>
-    <option value="orange">Orange</option>
-  </select>
-  <script>
-    let mycolor = document.querySelector('#colors'); // Corrected selector
-    mycolor.addEventListener('change', function() {
-      document.body.style.backgroundColor = mycolor.value;
-    });
-  </script>
+    <h1>Change the Background Color</h1>
+    <select name="colors" id="colors">
+        <option value="">Select Color</option>
+        <option value="lightcoral">Light Coral</option>
+        <option value="lavender">Lavender</option>
+        <option value="hotpink">Hot Pink</option>
+        <option value="gamboge">Gamboge</option>
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+        <option value="black">Black</option>
+        <option value="orange">Orange</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="purple">Purple</option>
+        <option value="pink">Pink</option>
+        <option value="brown">Brown</option>
+        <option value="cyan">Cyan</option>
+        <option value="magenta">Magenta</option>
+        <option value="teal">Teal</option>
+        <option value="olive">Olive</option>
+        <option value="navy">Navy</option>
+        <option value="maroon">Maroon</option>
+        <option value="lime">Lime</option>
+        <option value="aqua">Aqua</option>
+        <option value="silver">Silver</option>
+        <option value="gray">Gray</option>
+        <option value="indigo">Indigo</option>
+        <option value="violet">Violet</option>
+        <option value="gold">Gold</option>
+        <option value="coral">Coral</option>
+        <option value="salmon">Salmon</option>
+        <option value="tan">Tan</option>
+        <option value="khaki">Khaki</option>
+        <option value="plum">Plum</option>
+        <option value="orchid">Orchid</option>
+        <option value="turquoise">Turquoise</option>
+        <option value="azure">Azure</option>
+        <option value="beige">Beige</option>
+        <option value="mint">Mint</option>
+        <option value="ivory">Ivory</option>
+        <option value="wheat">Wheat</option>
+        <option value="linen">Linen</option>
+        <option value="bisque">Bisque</option>
+        <option value="peachpuff">Peach Puff</option>
+        <option value="snow">Snow</option>
+        <option value="honeydew">Honeydew</option>
+        <option value="moccasin">Moccasin</option>
+        <option value="thistle">Thistle</option>
+        <option value="lavenderblush">Lavender Blush</option>
+        <option value="aliceblue">Alice Blue</option>
+        <option value="ghostwhite">Ghost White</option>
+        <option value="seashell">Seashell</option>
+        <option value="oldlace">Old Lace</option>
+        <option value="floralwhite">Floral White</option>
+        <option value="cornsilk">Cornsilk</option>
+        <option value="papayawhip">Papaya Whip</option>
+        <option value="blanchedalmond">Blanched Almond</option>
+        <option value="antiquewhite">Antique White</option>
+        <option value="mistyrose">Misty Rose</option>
+        <option value="lemonchiffon">Lemon Chiffon</option>
+    </select>
+
+    <script>
+        const colorSelect = document.getElementById('colors');
+        colorSelect.addEventListener('change', function() {
+            const selectedColor = colorSelect.value;
+            document.body.style.backgroundColor = selectedColor || 'white';
+        });
+    </script>
 </body>
 </html>
